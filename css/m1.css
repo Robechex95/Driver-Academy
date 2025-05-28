@@ -1,0 +1,216 @@
+/* css/m1.css */
+/* Variables de color */
+:root {
+    --primary: #2596be;
+    --secondary: #d4af37;
+    --accent: #ff3b3f;
+    --dark: #2d2d2d;
+    --light: #f0f0f0;
+    --success: #4caf50;
+    --error: #f44336;
+}
+
+/* Estilos generales */
+body {
+    background-color: #1a2832;
+    color: var(--light);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.6;
+}
+
+/* Header */
+.module-header {
+    background: var(--dark);
+    padding: 1rem;
+    border-bottom: 4px solid var(--primary);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    border: 3px solid var(--primary);
+    box-shadow: 4px 4px 0 #1a5370;
+    image-rendering: pixelated;
+}
+
+.return-button {
+    background: var(--accent);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+    font-size: 0.8rem;
+}
+
+.return-button:hover {
+    background: #ff1a1f;
+    transform: translateY(-2px);
+}
+
+/* Contenedor principal */
+.module-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Secciones */
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(37, 150, 190, 0.1);
+    border: 2px dashed var(--primary);
+    border-radius: 8px;
+}
+
+.section-header h2 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* PDF Viewer */
+.pdf-container {
+    background: var(--dark);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 3rem;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 70vh;
+    border: 3px solid var(--primary);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.pdf-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.pdf-button {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.pdf-button:hover {
+    background: #1f7a9c;
+    transform: scale(1.05);
+}
+
+/* Preguntas */
+.question-list {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.question-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.option-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light);
+    border: 2px solid var(--primary);
+    padding: 1rem;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+}
+
+.option-button:hover {
+    background: rgba(37, 150, 190, 0.2);
+}
+
+.option-button.correct {
+    background: rgba(76, 175, 80, 0.2);
+    border-color: var(--success);
+}
+
+.answer {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--success);
+    display: none;
+}
+
+/* Botón de examen */
+.exam-section {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.exam-button {
+    background: var(--secondary);
+    color: var(--dark);
+    padding: 1.5rem 3rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: inline-block;
+    box-shadow: 0 4px 0 #b88d2a;
+}
+
+.exam-button:hover {
+    background: #e6ba48;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 0 #b88d2a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pdf-viewer {
+        height: 50vh;
+    }
+    
+    .options {
+        grid-template-columns: 1fr;
+    }
+    
+    .exam-button {
+        padding: 1.2rem 2rem;
+        font-size: 1rem;
+    }
+}
